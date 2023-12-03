@@ -12,6 +12,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.config.productionTip = false
 Vue.use(ElementUI);
 Vue.prototype.request=request;
+// 创建实例
 new Vue({
   router,
   store,
