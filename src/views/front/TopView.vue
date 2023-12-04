@@ -58,10 +58,10 @@
                     </el-carousel>
                 </div>
             </div>
-            <!--推荐商品-->
+            <!--推荐书籍-->
             <div style="margin-top: 30px">
                 <i class="el-icon-a-02" style="color: #ff5e5e;font-size: 28px; font-weight: 600;">
-                    推荐商品
+                    推荐书籍
                 </i>
             </div>
 
@@ -97,6 +97,47 @@
                     </el-col>
                 </el-row>
             </div>
+
+
+             <!--书籍列表-->
+             <div style="margin-top: 30px">
+                <i class="el-icon-a-02" style="color: #5eff86;font-size: 28px; font-weight: 600;">
+                    书籍列表
+                </i>
+            </div>
+
+            <div style="margin: 20px auto">
+                <el-row :gutter="20">
+                    <el-col
+                        :span="6"
+                        v-for="book1 in SimBook"
+                        :key="book1.id"
+                        style="margin-bottom: 20px"
+                    >
+                        <router-link :to="'bookview/' + book1.id">
+                            <el-card
+                                :body-style="{
+                                    padding: '0px',
+                                    background: '#e3f5f4',
+                                }"
+                            >
+                                <img
+                                    :src="baseApi + book1.imgs"
+                                    style="width: 85%; height: 150px"
+                                />
+                                <div style="padding: 5px 10px">
+                                    <span style="font-size: 15px"
+                                        ><b>{{ book1.name }}</b></span
+                                    ><br />
+                                    <span style="color: red; font-size: 12px"
+                                        ><b>￥{{ book1.price }}</b></span
+                                    >
+                                </div>
+                            </el-card>
+                        </router-link>
+                    </el-col>
+                </el-row>
+            </div>
         </div>
     </div>
 </template>
@@ -111,6 +152,8 @@ export default {
             carousels: [],
             //推荐商品
             book: [],
+            // 普通书籍
+            SimBook:[],
             baseApi: this.$store.state.baseApi,
 
             //分类icon，每个icon包含id、value、categories对象数组.category：id，name
@@ -129,10 +172,18 @@ export default {
                 console.log("登录成功: ", res.data)
                 this.book = res.data;
             } else {
-                console.log("有问题")
                 this.$message.error(res.msg);
             }
         });
+        this.request.get("/api/book/SimBook").then((res) => {
+            if (res.code === "200") {
+                console.log("登录成功: ", res.data)
+                this.SimBook = res.data;
+            } else {
+                this.$message.error(res.msg);
+            }
+        });
+
         this.request.get("/api/icon").then((res) => {
             if (res.code === "200") {
                 this.icons = res.data;

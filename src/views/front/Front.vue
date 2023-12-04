@@ -56,7 +56,7 @@ export default {
   },
   created() {
     if(localStorage.getItem("user")){
-      request.post("http://localhost:9191/role").then(res=> {
+      request.post("http://localhost:9999/role").then(res=> {
         if (res.code === '200') {
           this.role = res.data;
           if (localStorage.getItem("user")) {
