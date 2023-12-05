@@ -172,6 +172,8 @@ export default {
         this.request.post("/api/category", category).then((res) => {
           if (res.code === "200") {
             this.$message.success("修改成功");
+            //还需要更新重新获取
+            window.location.reload();
           } else {
             this.$message.error("修改失败");
           }
@@ -206,6 +208,7 @@ export default {
         if (res.code === "200") {
           this.$message.success("修改成功");
           this.dialogFormVisible = false;
+          window.location.reload();
         } else {
           this.$message.error("修改失败");
         }

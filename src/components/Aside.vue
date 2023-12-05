@@ -10,7 +10,7 @@
       <router-link to="/manage/home">
         <img src="../resource/logo.png" style="width: 32px;position: relative; top: 7px;right: 6px;">
       </router-link>
-      <span slot="title" style="color: aliceblue;font-size: 20px" v-show="!isCollapse">在线商城后台管理</span>
+      <span slot="title" style="color: aliceblue;font-size: 20px" v-show="!isCollapse">书城后台管理</span>
     </div>
     <el-menu-item index="/manage/home">
       <i class="el-icon-a-011" style="font-size: 22px;color: white;"></i><span slot="title">主页</span>
@@ -32,17 +32,18 @@
         <el-menu-item index="/manage/avatar" v-if="menuFlags.avatarMenu">头像管理</el-menu-item>
       </el-submenu>
       <el-submenu v-if="BookGroup" index="book">
-        <template slot="title"><i class="el-icon-a-041" style="font-size: 22px;color: white;"></i>商品</template>
-        <el-menu-item index="/manage/category" v-if="menuFlags.categoryMenu">商品分类管理</el-menu-item>
+        <template slot="title"><i class="el-icon-a-041" style="font-size: 22px;color: white;"></i>书籍</template>
+        <el-menu-item index="/manage/category" v-if="menuFlags.categoryMenu">书籍分类管理</el-menu-item>
         <el-menu-item index="/manage/carousel" v-if="menuFlags.carouselMenu">轮播图管理</el-menu-item>
-        <el-menu-item index="/manage/book" v-if="menuFlags.bookMenu">商品管理</el-menu-item>
+        <el-menu-item index="/manage/book" v-if="menuFlags.bookMenu">书籍管理</el-menu-item>
         <el-menu-item index="/manage/order" v-if="menuFlags.orderMenu">订单管理</el-menu-item>
       </el-submenu>
-      <el-submenu v-if="incomeGroup" index="income">
+      <!-- 营收显示这块放弃不做 -->
+      <!-- <el-submenu v-if="incomeGroup" index="income">
         <template slot="title"><i class="el-icon-a-021" style="font-size: 22px;color: white;"></i>营收</template>
         <el-menu-item index="/manage/incomeChart" v-if="menuFlags.incomeChartMenu">图表分析</el-menu-item>
         <el-menu-item index="/manage/incomeRank" v-if="menuFlags.incomeRankMenu">收入排行榜</el-menu-item>
-      </el-submenu>
+      </el-submenu> -->
     </el-submenu>
   </el-menu>
 </template>

@@ -110,27 +110,26 @@
                 <el-row :gutter="20">
                     <el-col
                         :span="6"
-                        v-for="book1 in SimBook"
-                        :key="book1.id"
+                        v-for="book2 in SimBook"
+                        :key="book2.id"
                         style="margin-bottom: 20px"
                     >
-                        <router-link :to="'bookview/' + book1.id">
+                        <router-link :to="'bookview/' + book2.id">
                             <el-card
                                 :body-style="{
                                     padding: '0px',
                                     background: '#e3f5f4',
-                                }"
-                            >
+                                }">
                                 <img
-                                    :src="baseApi + book1.imgs"
-                                    style="width: 85%; height: 150px"
+                                    :src="baseApi + book2.imgs"
+                                    style="width: 100%; height: 240px"
                                 />
                                 <div style="padding: 5px 10px">
                                     <span style="font-size: 15px"
-                                        ><b>{{ book1.name }}</b></span
+                                        ><b>{{ book2.name }}</b></span
                                     ><br />
                                     <span style="color: red; font-size: 12px"
-                                        ><b>￥{{ book1.price }}</b></span
+                                        ><b>￥{{ book2.price }}</b></span
                                     >
                                 </div>
                             </el-card>
