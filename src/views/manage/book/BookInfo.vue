@@ -1,14 +1,14 @@
 <template>
   <div style="width: 1000px; margin: 50px auto">
     <el-form :model="book">
-      <el-form-item label="商品名称" label-width="150px">
+      <el-form-item label="书籍名称" label-width="150px">
         <el-input
           v-model="book.name"
           autocomplete="off"
           style="width: 80%"
         ></el-input>
       </el-form-item>
-      <el-form-item label="商品描述" label-width="150px">
+      <el-form-item label="书籍描述" label-width="150px">
         <el-input
           v-model="book.description"
           autocomplete="off"
@@ -48,7 +48,7 @@
           </el-option>
         </el-select>
       </el-form-item>
-      <el-form-item label="商品图片" label-width="150px">
+      <el-form-item label="书籍图片" label-width="150px">
         <el-upload
           class="upload-demo"
           ref="upload"
@@ -139,7 +139,7 @@ export default {
         this.book = JSON.parse(this.$route.query.book);
         this.fileList = [{ name: "原始图片", url: this.book.imgs }];
         this.checkedCategory = this.categoryItems[this.book.categoryId];
-        //从服务器获取商品规格信息
+        //从服务器获取书籍规格信息
         this.request.get(url + "/standard/" + this.book.id).then((res) => {
           if (res.code === "200") {
             let standards = JSON.parse(res.data);
@@ -222,7 +222,7 @@ export default {
       if (this.book.name == undefined || this.book.name.trim() == "") {
         this.$message({
           type: "error",
-          message: "请输入商品名称",
+          message: "请输入书籍名称",
           showClose: true,
         });
         return false;
@@ -233,7 +233,7 @@ export default {
       ) {
         this.$message({
           type: "error",
-          message: "请输入商品描述",
+          message: "请输入书籍描述",
           showClose: true,
         });
         return false;
@@ -249,7 +249,7 @@ export default {
       if (this.book.discount == undefined || this.book.discount === "") {
         this.$message({
           type: "error",
-          message: "请输入商品折扣",
+          message: "请输入书籍折扣",
           showClose: true,
         });
         return false;
@@ -259,7 +259,7 @@ export default {
       ) {
         this.$message({
           type: "error",
-          message: "请选择商品分类",
+          message: "请选择书籍分类",
           showClose: true,
         });
         return false;

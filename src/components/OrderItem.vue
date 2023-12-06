@@ -13,7 +13,7 @@
     <div style="display: inline-block;line-height: 40px" >
       <table>
         <tr>
-          <th>商品</th>
+          <th>书籍</th>
           <th>规格</th>
           <th>数量</th>
           <th>总价</th>

@@ -17,14 +17,14 @@
     </div>
 
     <el-table :data="tableData" border stripe style="width: 100%">
-      <el-table-column prop="id" label="商品id" width="80px"></el-table-column>
-      <el-table-column prop="name" label="商品名称"></el-table-column>
-      <el-table-column label="商品图片" width="120px">
+      <el-table-column prop="id" label="书籍id" width="80px"></el-table-column>
+      <el-table-column prop="name" label="书籍名称"></el-table-column>
+      <el-table-column label="书籍图片" width="120px">
         <template slot-scope="scope">
           <img :src="baseApi + scope.row.imgs" style="width: 90px;height: 80px">
         </template>
       </el-table-column>
-      <el-table-column prop="description" label="商品描述"></el-table-column>
+      <el-table-column prop="description" label="书籍描述"></el-table-column>
       <el-table-column prop="discount" label="折扣"></el-table-column>
       <el-table-column prop="sales" label="销量"></el-table-column>
       <el-table-column prop="saleMoney" label="销售额（元)"></el-table-column>
@@ -34,7 +34,7 @@
         </template>
       </el-table-column>
       <el-table-column label="推荐" width="150" >
-    <!--      推荐商品-->
+    <!--      推荐书籍-->
         <template slot-scope="scope">
           <el-switch
               v-model="scope.row.recommend"
@@ -77,10 +77,10 @@
     <el-dialog title="信息" :visible.sync="dialogFormVisible" width="30%"
                :close-on-click-modal="false">
       <el-form :model="entity">
-        <el-form-item label="商品名称" label-width="150px">
+        <el-form-item label="书籍名称" label-width="150px">
           <el-input v-model="entity.name" autocomplete="off" style="width: 80%"></el-input>
         </el-form-item>
-        <el-form-item label="商品描述" label-width="150px">
+        <el-form-item label="书籍描述" label-width="150px">
           <el-input v-model="entity.description" autocomplete="off" style="width: 80%"></el-input>
         </el-form-item>
         <el-form-item label="折扣" label-width="150px">
@@ -89,7 +89,7 @@
         <el-form-item label="分类id" label-width="150px">
           <el-input v-model="entity.categoryId" autocomplete="off" style="width: 80%"></el-input>
         </el-form-item>
-        <el-form-item label="商品图片" label-width="150px">
+        <el-form-item label="书籍图片" label-width="150px">
           <el-upload
               class="upload-demo"
               ref="upload"

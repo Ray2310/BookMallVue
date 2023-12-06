@@ -11,7 +11,7 @@
             </div>
             <!--    右侧盒子-->
             <div class="detail-box">
-                <!--      商品名与描述-->
+                <!--      书籍名与描述-->
                 <div>
                     <span style="font-size: 22px"
                         ><strong>{{ book.name }}</strong></span
@@ -202,7 +202,7 @@ export default {
     },
 
     created() {
-        //初始化商品信息
+        //初始化书籍信息
         // this.book = JSON.parse(this.$route.query.book)
         this.bookId = this.$route.params.bookId;
         this.request.get("/api/book/" + this.bookId).then((res) => {
@@ -217,7 +217,7 @@ export default {
                 this.$router.go(0);
             }
         });
-        //从服务器获取商品规格信息
+        //从服务器获取书籍规格信息
         this.request.get("/api/book/standard/" + this.bookId).then((res) => {
             if (res.code === "200") {
                 console.log("res内容： ", res)

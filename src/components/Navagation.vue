@@ -1,14 +1,10 @@
-<!--
- * @Description: 
- * @Author: Rabbiter
- * @Date: 2023-03-26 15:27:05
--->
+
 <template>
   <div class="navagation">
     <el-row>
       <el-col :span="3">
         <div style="font-size: 20px; font-weight: bold; text-align: center">
-          <a href="/"><i class="el-icon-a-011"></i> 在线商城</a>
+          <a href="/"><i class="el-icon-a-011"></i> 在线书城</a>
         </div>
       </el-col>
       <el-col :span="17">
@@ -18,10 +14,10 @@
           mode="horizontal"
           router
         >
-          <el-menu-item index="/" class="menu-item">商城首页</el-menu-item>
+          <el-menu-item index="/" class="menu-item">书城首页</el-menu-item>
           
           <el-menu-item index="/bookList" class="menu-item"
-            >商品分类</el-menu-item
+            >书籍分类</el-menu-item
           >
           <el-menu-item index="/cart" class="menu-item"
             >我的购物车</el-menu-item

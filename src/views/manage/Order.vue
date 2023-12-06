@@ -76,9 +76,9 @@
           </template>
         </el-table-column>
 
-        <el-table-column prop="bookId" label="商品id"  ></el-table-column>
-        <el-table-column prop="bookName" label="商品名称"  ></el-table-column>
-        <el-table-column prop="standard" label="商品规格"  ></el-table-column>
+        <el-table-column prop="bookId" label="书籍id"  ></el-table-column>
+        <el-table-column prop="bookName" label="书籍名称"  ></el-table-column>
+        <el-table-column prop="standard" label="书籍规格"  ></el-table-column>
         <el-table-column prop="price" label="单价"  ></el-table-column>
         <el-table-column prop="discount" label="折扣"></el-table-column>
         <el-table-column label="实价" >

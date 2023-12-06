@@ -2,7 +2,7 @@
   <div>
     <div>
       <el-table :data="tableData" border stripe style="width: 80%;margin: 2px auto">
-        <el-table-column label="商品">
+        <el-table-column label="书籍">
           <template slot-scope="scope">
             <a :href="'/bookView/'+scope.row.bookId">{{scope.row.bookName}}</a>
           </template>
@@ -42,7 +42,7 @@
     <el-dialog title="信息" :visible.sync="dialogFormVisible" width="30%"
                :close-on-click-modal="false">
       <el-form :model="entity">
-        <el-form-item label="商品id" label-width="150px">
+        <el-form-item label="书籍id" label-width="150px">
           <el-input v-model="entity.bookId" autocomplete="off" style="width: 80%"></el-input>
         </el-form-item>
         <el-form-item label="轮播顺序" label-width="150px">
@@ -110,7 +110,7 @@ export default {
     },
     save() {
       if(this.entity.bookId == undefined || this.entity.bookId === "") {
-          this.$message.error("商品id不能为空")
+          this.$message.error("书籍id不能为空")
           return;
       }
       if(this.entity.showOrder == undefined) {

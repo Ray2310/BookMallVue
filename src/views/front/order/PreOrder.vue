@@ -56,9 +56,9 @@
         </div>
       </el-dialog>
 
-      <!--        商品确认-->
+      <!--        书籍确认-->
       <el-table :data="books" stripe style="width: 100%">
-        <el-table-column label="商品图片" width="150">
+        <el-table-column label="书籍图片" width="150">
           <template slot-scope="scope">
             <el-image
               :src="baseApi + scope.row.imgs"
@@ -67,7 +67,7 @@
             ></el-image>
           </template>
         </el-table-column>
-        <el-table-column prop="name" label="商品名称"></el-table-column>
+        <el-table-column prop="name" label="书籍名称"></el-table-column>
         <el-table-column prop="standard" label="规格"></el-table-column>
         <el-table-column prop="realPrice" label="单价"></el-table-column>
         <el-table-column prop="num" label="数量"></el-table-column>

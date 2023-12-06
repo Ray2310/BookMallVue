@@ -10,11 +10,11 @@
           <img :src="baseApi + cart.img" style="width: 100px;height:100px">
         </router-link>
       </div>
-<!--      商品信息-->
+<!--      书籍信息-->
       <div style="display: inline-block;line-height: 40px" >
         <table>
           <tr>
-            <th>商品</th>
+            <th>书籍</th>
             <th>规格</th>
             <th>价格</th>
             <th>数量</th>

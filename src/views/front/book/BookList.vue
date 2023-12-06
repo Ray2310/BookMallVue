@@ -5,7 +5,7 @@
       <div style="margin: 20px auto">
         <h2>
           <i class="el-icon-a-041"></i>
-          商品分类
+          书籍分类
         </h2>
         <!--      类别菜单-->
         <el-row :gutter="20" style="font-size: 18px;">
@@ -36,7 +36,7 @@
             :key="book.id"
             style="margin-bottom: 20px"
           >
-            <!--            商品格子-->
+            <!--            书籍格子-->
             <router-link :to="'bookview/' + book.id">
               <el-card :body-style="{ padding: '0px', background: '#e3f5f4' }">
                 <img

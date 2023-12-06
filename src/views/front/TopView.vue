@@ -149,7 +149,7 @@ export default {
         return {
             //轮播图
             carousels: [],
-            //推荐商品
+            //推荐书籍
             book: [],
             // 普通书籍
             SimBook:[],

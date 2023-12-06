@@ -1,8 +1,3 @@
-<!--
- * @Description: 
- * @Author: Rabbiter
- * @Date: 2023-03-26 15:27:05
--->
 <template>
     <div id="bk" class="wrapper">
         <div class="login-box">
@@ -19,7 +14,7 @@
                         user-drag: none;
                     "
                 />
-                <b style="font-size: 28px"> 登录Rayce商城 </b>
+                <b style="font-size: 28px"> 登录书城 </b>
             </div>
             <div style="margin-top: 30px">
                 <el-form label-width="70px">

@@ -1,8 +1,4 @@
-<!--
- * @Description: 
- * @Author: Rabbiter
- * @Date: 2023-03-26 15:27:05
--->
+
 <template>
 <div style="margin-top: 10px;width: 50%;margin: 10px auto;background-color: white;text-align: center">
   <table style="margin: 20px auto">
