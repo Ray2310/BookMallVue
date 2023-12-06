@@ -7,7 +7,7 @@
           <i class="el-icon-a-041"></i>
           书籍分类
         </h2>
-        <!--      类别菜单-->
+        <!--      类别菜单 ()-->
         <el-row :gutter="20" style="font-size: 18px;">
           <el-col v-for="(item, index) in icons" :key="index" :span="6">
             <i class="iconfont" v-html="item.value"></i>
