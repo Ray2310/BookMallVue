@@ -101,7 +101,7 @@
 
              <!--书籍列表-->
              <div style="margin-top: 30px">
-                <i class="el-icon-a-02" style="color: #5eff86;font-size: 28px; font-weight: 600;">
+                <i class="el-icon-a-03" style="color: #5eccff;font-size: 28px; font-weight: 600;">
                     书籍列表
                 </i>
             </div>

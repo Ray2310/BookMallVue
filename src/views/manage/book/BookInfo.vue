@@ -51,18 +51,17 @@
       <el-form-item label="书籍图片" label-width="150px">
         <el-upload
           class="upload-demo"
-          ref="upload"
+          ref="upload" 
           :action="baseApi + '/file/upload'"
           :file-list="fileList"
           :on-change="handleChange"
           :limit="1"
           :on-remove="handleRemove"
           :on-success="handleImgSuccess"
-          :auto-upload="false"
-        >
+          :auto-upload="false">
+          
           <el-button slot="trigger" size="small" type="primary"
-            >选取文件</el-button
-          >
+            >选取文件</el-button>
           <div slot="tip" class="el-upload__tip">
             只能上传一个jpg/png文件，且不超过500kb
           </div>
@@ -72,7 +71,7 @@
         <el-button type="success" @click="submit">提交</el-button>
       </el-form-item>
     </el-form>
-    <!-- 弹窗   -->
+    <!-- 书籍规格的弹窗   -->
     <el-dialog
       title="规格信息"
       :visible.sync="dialogFormVisible"
