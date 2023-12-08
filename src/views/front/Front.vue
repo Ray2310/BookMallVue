@@ -7,10 +7,7 @@
                   :login-status="loginStatus"
       ></Navagation>
     </el-header>
-
-
     <el-main style="background-color: lightgrey;width:100%;">
-
       <router-view />
     </el-main>
 

@@ -12,25 +12,13 @@
           :default-active="activeIndex"
           class="el-menu-demo"
           mode="horizontal"
-          router
-        >
+          router>
           <el-menu-item index="/" class="menu-item">书城首页</el-menu-item>
-          
-          <el-menu-item index="/bookList" class="menu-item"
-            >书籍分类</el-menu-item
-          >
-          <el-menu-item index="/cart" class="menu-item"
-            >我的购物车</el-menu-item
-          >
-          <el-menu-item index="/orderlist" class="menu-item"
-            >我的订单</el-menu-item
-          >
-          <el-menu-item
-            index="/manage"
-            class="menu-item"
-            v-if="role === 'admin'"
-            >后台管理</el-menu-item
-          >
+          <el-menu-item index="/bookList" class="menu-item">书籍分类</el-menu-item>
+          <el-menu-item index="/cart" class="menu-item">我的购物车</el-menu-item>
+          <el-menu-item index="/orderlist" class="menu-item">我的订单</el-menu-item>
+          <el-menu-item index="/manage" class="menu-item"
+            v-if="role === 'admin'">后台管理</el-menu-item>
         </el-menu>
       </el-col>
       <el-col :span="4">
