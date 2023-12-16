@@ -71,8 +71,7 @@
                         :span="6"
                         v-for="book1 in book"
                         :key="book1.id"
-                        style="margin-bottom: 20px"
-                    >
+                        style="margin-bottom: 20px">
                         <router-link :to="'bookview/' + book1.id">
                             <el-card
                                 :body-style="{
@@ -89,23 +88,19 @@
                                         ><b>{{ book1.name }}</b></span
                                     ><br />
                                     <span style="color: red; font-size: 15px"
-                                        ><b>￥{{ book1.price }}</b></span
-                                    >
+                                        ><b>￥{{ book1.price }}</b></span>
                                 </div>
                             </el-card>
                         </router-link>
                     </el-col>
                 </el-row>
             </div>
-
-
              <!--书籍列表-->
              <div style="margin-top: 30px">
                 <i class="el-icon-a-03" style="color: #5eccff;font-size: 28px; font-weight: 600;">
                     书籍列表
                 </i>
             </div>
-
             <div style="margin: 20px auto">
                 <el-row :gutter="20">
                     <el-col

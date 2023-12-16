@@ -1,16 +1,17 @@
-
 <template>
+  <!-- 使用containter组件来进行页面布局 -->
   <el-container style="height: 100%;width:100%;">
+    <!-- 前端页面的头部 -->
     <el-header style="background-color: white">
       <Navagation :user="user"
                   :role="role"
                   :login-status="loginStatus"
       ></Navagation>
     </el-header>
+    <!-- 前端页面的body部分 -->
     <el-main style="background-color: lightgrey;width:100%;">
       <router-view />
     </el-main>
-
   </el-container>
 </template>
 
@@ -39,10 +40,8 @@ export default {
           console.log(this.user.role)
         })
       }
-
     },
   },
-
 
   components:{
     Navagation,

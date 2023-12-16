@@ -2,10 +2,6 @@
     <div class="main-box">
         <div>
             <!--    左侧的图片-->
-            <!-- <div class="image-box">
-        <img :src="baseApi + book.imgs" class="image" />
-      </div> -->
-
             <div class="image-container">
                 <img :src="baseApi + book.imgs" alt="Your Image" />
             </div>
@@ -21,7 +17,6 @@
                     <span style="font-size: 17px">{{ book.description }}</span>
                 </div>
                 <!--      价格盒子-->
-
                 <div class="price-box" v-if="book.discount < 1">
                     <dl>
                         <div>

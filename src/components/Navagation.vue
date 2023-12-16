@@ -1,4 +1,3 @@
-
 <template>
   <div class="navagation">
     <el-row>
@@ -44,8 +43,7 @@
               <!--              传给前端，登录后跳转页面的path为 "/"-->
               <div
                 @click="$router.push({ path: '/login', query: { to: '/' } })"
-                v-show="!loginStatus"
-              >
+                v-show="!loginStatus">
                 登录
               </div>
             </el-dropdown-item>
