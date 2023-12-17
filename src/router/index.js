@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import request from '../utils/request';
 
-
 Vue.use(VueRouter)
 //requireAuth: 是否需要检查登录
 const routes = [
@@ -45,7 +44,6 @@ const routes = [
       {path: 'order', name: 'order', meta: {title:'订单管理',path: '书籍/订单管理',requireAuth: true}, component: () => import('../views/manage/Order.vue'),},
       {path: 'incomeChart', name: 'incomeChart', meta: {title:'收入图表',path: '营收/收入图表',requireAuth: true}, component: () => import('../views/manage/income/IncomeChart.vue'),},
       {path: 'incomeRank', name: 'incomeRank', meta: {title:'收入排行',path: '营收/收入排行',requireAuth: true}, component: () => import('../views/manage/income/IncomeRank.vue'),},
-
     ]
   },
   {

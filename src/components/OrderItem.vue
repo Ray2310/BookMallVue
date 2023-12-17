@@ -59,7 +59,6 @@
               <el-button style="margin-left: 20px;font-size: 15px;" type="success" @click="pay">去支付</el-button>
             </td>
           </template>
-
         </tr>
       </table>
     </div>

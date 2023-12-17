@@ -20,8 +20,6 @@
     </div>
     <span style="font-size: 10px">{{ message.createTime }}</span>
   </div>
-
-
 </div>
 </template>
 
