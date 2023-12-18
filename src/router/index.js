@@ -42,8 +42,6 @@ const routes = [
       {path: 'book', name: 'book', meta: {title:'书籍管理',path: '书籍/书籍管理',requireAuth: true}, component: () => import('../views/manage/book/Books.vue'),},
       {path: 'bookInfo', name: 'bookInfo', meta: {title:'书籍管理',path: '书籍/书籍管理/书籍信息',requireAuth: true}, component: () => import('../views/manage/book/BookInfo.vue'),},
       {path: 'order', name: 'order', meta: {title:'订单管理',path: '书籍/订单管理',requireAuth: true}, component: () => import('../views/manage/Order.vue'),},
-      {path: 'incomeChart', name: 'incomeChart', meta: {title:'收入图表',path: '营收/收入图表',requireAuth: true}, component: () => import('../views/manage/income/IncomeChart.vue'),},
-      {path: 'incomeRank', name: 'incomeRank', meta: {title:'收入排行',path: '营收/收入排行',requireAuth: true}, component: () => import('../views/manage/income/IncomeRank.vue'),},
     ]
   },
   {

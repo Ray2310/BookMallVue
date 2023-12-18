@@ -127,6 +127,6 @@ export default {
     width: 100%;
     overflow-y: auto;
     height: 100%;
-    background: url("../resource/01.jpg") center top / cover no-repeat;
+    background: url("../resource/img/back.jpg") center top / cover no-repeat;
 }
 </style>
