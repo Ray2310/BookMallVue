@@ -4,8 +4,7 @@
            text-color ="#fff"
            :collapse-transition="false"
            :collapse="isCollapse"
-           router
-  >
+           router>
     <div style="height: 60px;margin-left: 30px; line-height: 60px">
       <router-link to="/manage/home">
         <img src="../resource/logo.png" style="width: 32px;position: relative; top: 7px;right: 6px;">
