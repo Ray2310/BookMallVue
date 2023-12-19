@@ -103,7 +103,6 @@
 
 <script>
 import API from "@/utils/request";
-
 export default {
     name: "BookView",
     data() {
